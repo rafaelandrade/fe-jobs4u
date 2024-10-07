@@ -2,8 +2,7 @@
 
 import { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Pagination } from '@mui/material';
-import Grid2 from '@mui/material/Grid2';
+import { Dialog, DialogTitle, DialogContent, DialogActions, Grid, Button, Pagination } from '@mui/material';
 
 
 export default function Home() {
@@ -176,9 +175,9 @@ export default function Home() {
                     {currentJobs.length === 0 ? (
                         <p>No jobs found. Please try different keywords or location.</p>
                     ) : (
-                        <Grid2 container spacing={2}>
+                        <Grid container spacing={2}>
                             {currentJobs.map((job, index) => (
-                                <Grid2 item xs={12} sm={6} key={index}>
+                                <Grid item xs={12} sm={6} key={index}>
                                     <div className="p-4 border rounded-lg shadow hover:shadow-md transition-shadow">
                                         <h3 className="text-gray-600 text-xl font-semibold">{job.title}</h3>
                                         <p className="text-gray-600">{job.company}</p>
@@ -191,9 +190,9 @@ export default function Home() {
                                             View Description
                                         </Button>
                                     </div>
-                                </Grid2>
+                                </Grid>
                             ))}
-                        </Grid2>
+                        </Grid>
                     )}
 
                     {/* Pagination Controls */}
